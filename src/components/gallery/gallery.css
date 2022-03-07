@@ -1,0 +1,32 @@
+.Gallery{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+  margin-bottom: 28vh;
+
+}
+.Gallery h1{
+  color: #13274e;
+  font-family: 'Times New Roman', Times, serif;
+}
+.Gallery .Slider {
+  width: 70%;
+  height: 80vh;
+  border: 5px solid #13274e;
+  border-radius: 10px;
+}
+.Gallery .Images {
+height: 80vh;
+
+}
+.Gallery .Mods{
+  color: #F79621;
+}
+@media only screen and (max-width: 900px){
+  .Slider{
+    width: 100%;
+    margin-top: 0%;
+  }
+}

@@ -1,0 +1,65 @@
+.Icon-Bar {
+  display: inline-block;
+  position: fixed;
+  top: 50%;
+  left: 98.5%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 30;
+}
+
+/* Icons */
+
+.Icon-Bar a {
+  color: #7a7979;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  font-family: fontawesome;
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 28px;
+  padding-top: 12px;
+  margin:4px 5px;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-font-smoothing: antialiased;
+  backdrop-filter: blur(9px) saturate(163%);
+  -webkit-backdrop-filter: blur(9px) saturate(163%);
+  background-color: rgba(255, 255, 255, 0.34);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+.Facebook:hover {
+  background-color: #4267B2;
+  color: white;
+}
+.Youtube:hover {
+  background-color: red;
+  color:  white;
+}
+.Instagram:hover {
+  background: #f09433; 
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+  color: white;
+}
+.FeedBack:hover {
+      background-color: #dc2743;
+      color: white;
+}   
+
+@media only screen and (max-width: 600px) {
+  .Icon-Bar {
+    top: 85%;
+    left: 95%;
+  }
+
+}

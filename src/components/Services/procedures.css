@@ -1,0 +1,193 @@
+.Procedures {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.Banner {
+  width: 100%;
+  height: 70vh;
+  background-color: #13274e;
+  color: #fcfcfc;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 4rem 0;
+  box-shadow: 4px 2px 23px -2px rgba(27, 195, 234, 0.23);
+  -webkit-box-shadow: 4px 2px 23px -2px rgba(27, 195, 234, 0.23);
+  -moz-box-shadow: 4px 2px 23px -2px rgba(27, 195, 234, 0.23);
+  clip-path: polygon(0 0, 100% 0, 100% 79%, 62% 100%, 0 89%);
+}
+.BannerContent h1{
+    font-size: 2.5rem;
+}
+.Banner img{
+  width: 60%;
+  padding: 2rem;
+  -webkit-animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@-webkit-keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.BannerContent {
+  width: 50%;
+  margin-left: 10rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  -webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@-webkit-keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.button1 {
+  background-color: #ffffff;
+  border: none;
+  color: #234191;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid #f79621;
+}
+.button2 {
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  margin: 0%;
+  padding: 0%;
+}
+
+/* Service Card Section*/
+
+.ServiceCards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 2rem;
+  padding: 2rem;
+  text-align: center;
+}
+.ServiceCards h1 {
+  font-size: 2.5rem;
+  color: #2b3a58;
+  font-family: "Times New Roman", Times, serif;
+}
+.ServiceCards .Row {
+  margin: 1rem;
+  padding: 0.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  row-gap: 5rem;
+}
+.ServiceCards .Row p {
+  color: #2b3a58;
+}
+.ServiceCards .category{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.ServiceCards .category .Treatment{
+  padding: 1rem;
+  background-color: #f1f1f1;
+  border-radius: 1rem;
+  width: 25%;
+}
+.ServiceCards .category .Treatment img{
+  width: 90%;
+  border-radius: 1rem;
+}
+.ServiceCards .category .Treatment h3{
+  font-size: 1rem;
+  font-weight: 600;
+}
+.ServiceCards .category .Treatment:hover{
+  background-color: #e2e2e2;
+}
+
+@media only screen and (max-width: 900px) {
+  .Banner {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+  }
+  .BannerContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 0%;
+    padding: 0.5rem;
+  }
+
+  .ServiceCards .Row {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .flip-card {
+    margin: 2rem;
+    padding: 2rem;
+  }
+}

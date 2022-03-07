@@ -1,0 +1,631 @@
+.HomeContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f1f1f1;
+}
+.Slider {
+  width: 100vw;
+  height: 95vh;
+}
+.Slide{
+  /*-webkit-animation: scale-in-hor-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: scale-in-hor-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;*/
+  width: 100%;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  gap:2rem;
+object-fit: contain;
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .blur{
+    padding: 1rem;
+    width: 70%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 1rem;  
+  }
+}
+@-webkit-keyframes scale-in-hor-left {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+    opacity: 1;
+  }
+}
+@keyframes scale-in-hor-left {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+    opacity: 1;
+  }
+}
+.Slide img{
+  height: 100%;
+  object-fit: cover;
+  filter: blur(1.5px);
+}
+.Slide .btn{
+  text-decoration: none;
+  background-color: #2b3a58;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+.btn:hover {
+  background-color: rgb(255, 123, 0);
+}
+.Slide h1{
+  font-size: 3rem;
+  width: 60%;
+  color: #2b3a58;
+}
+
+
+.Slide p{
+  color: #2b3a58;
+  font-size: 1.2rem;
+  font-weight: 500;
+  width: 40%;
+  word-wrap: break-word;
+}
+.Mods {
+color: #f79621;
+}
+.Introduction1{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+ justify-content: center;
+ padding: 6rem 0 ;
+ -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 81%, 71% 100%, 0 81%, 0 0);
+ clip-path: polygon(50% 0%, 100% 0, 100% 81%, 71% 100%, 0 81%, 0 0);
+ background-color: #13274e;
+ -webkit-animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+.Intro-Content{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: justify;
+}
+.Header-Intro{
+  width: 80%;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: large;
+  color: #ffffff;
+}
+.Content-Intro {
+  display: flex;
+  flex-direction: row;
+justify-content: center;
+}
+.Header-Intro h1{
+  margin: 0;
+}
+.Content-Intro p{
+    width: 80%;
+    word-wrap: break-word;
+    color: rgb(255, 255, 255);
+    margin-top: 0;
+}
+.Youtube-Integration{
+  width: 50%;
+
+}
+.Youtube-Integration iframe{
+  border-radius: 0.5rem;
+  border: solid 4px #F79621;
+}
+.Achievement-div{
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #13274e;
+  color: white;
+  margin-top: 4rem;
+}
+.Achievement-div h2{
+  font-family: 'Times New Roman', Times, serif;
+  margin: 1rem;
+  padding: 1rem;
+}
+.Gallery-div{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 4rem;
+  background-color: #13274e;;
+}
+.GalleryHeader{
+  width: 40%;
+}
+.GalleryHeader h1{
+  color: #fff;
+  font-size:2.5rem ;
+  font-family: 'Times New Roman', Times, serif;
+}
+.GalleryHeader p{
+  color:#fff;
+  font-size: 1.2rem;
+}
+.GalleryImages img{
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+  border: 5px solid #fff;
+  transition: all 5s ease-in-out;
+}
+.GalleryImages {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 3rem;
+}
+.GalleryButton .Explore-More {
+  background-color: #86afff;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+.GalleryButton{
+  margin-top: 3rem;
+}
+.Introduction-2{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 4rem;
+}
+.Intro-Header{
+  margin-left: 10rem;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.Intro-Header h1{ 
+  width: 70%;
+  word-wrap: break-word;
+  color: #2b3a58;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+.Intro-Header p{
+  width: 70%;
+  font-size: 1.1rem;
+  color: rgb(83, 83, 83);
+  word-wrap:break-word;
+}
+.Intro-Image{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.Intro-Image img{
+  width: 340px;
+  height: 450px;
+  border-radius: 10px;
+  border: 0.4rem solid orange;
+}
+.Team-div{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4rem;
+}
+.Team-div-Content h1{
+  color: #2b3a58;
+}
+.Team-div .TeamHeader{
+  color: #2b3a58;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+.Team-div .TeamImages img{
+  width: 350px;
+  height: 450px;
+  border-radius: 10px;
+}
+.Team-div-Content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+    text-align: center;
+}
+.TeamImages{
+  display: flex;
+  flex-direction: column;
+align-items: center;
+}
+.Team-div .card img{
+  width: 35%;
+}
+.HealthCard{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+.HealthCard .Card{
+  background-color: #89CDFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+}
+.HealthCard .Card h3{
+  width: 70%;
+  color: white;
+  word-wrap: break-word;
+  margin-top: 2rem;
+}
+.HealthCard .Card p{
+  width: 70%;
+  color: white;
+  word-wrap:break-word;
+}
+.HealthCard .Card img{
+  margin-top: 2rem;
+}
+
+.icon-bar body {margin:0;height:2000px;}
+
+.HomeContainer .icon-bar {
+  position: fixed;
+  top: 50%;
+  left: 0rem;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.youtube {
+  background: #bb0000;
+  color: white;
+  border-radius: 10px;
+}
+.facebook {
+  background: #3B5998;
+  color: white;
+  border-radius: 10px;
+}
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 8px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+.instagram{
+  background: #d6249f;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+  border-radius: 10px;
+}
+.Feedback {
+  position: fixed;
+top: 70%;
+  left: 0rem;
+bottom: 0%;
+width: 115px;
+text-align:right;
+z-index:9999;
+margin-top:-15px;
+}
+.feedbackBTN {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f79621;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 0.7rem;
+  font-weight: bolder;
+  height: 3rem;
+  padding: 1rem;
+  width: 10rem;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.feedbackBTN:hover {
+  background-color: rgba(0, 87, 185, 0.55);
+  color: white;
+}
+.Team-Button{
+ background-color: #86afff;
+ color: white;
+ margin: 1rem;
+ padding: 1rem;
+ text-decoration: none;
+ border-radius: 10px;
+}
+@media only screen and (max-width: 900px) {
+  .HomeContainer{
+    width: 100%;
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+  }
+  .Introduction1{
+    clip-path: polygon(100% 0, 100% 95%, 57% 100%, 0 94%, 0 0);
+    align-items: center;
+  }
+  .Intro-Content{
+    width: 100%;
+  }
+  .Header-Intro h1{
+    width: 90%;
+  }
+  .Youtube-Integration{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  
+  }
+  .HealthCard{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+@media only screen and (max-width: 900px){
+  .Slider{
+    width: 100%;
+    margin-top: 0%;
+  }
+  .Slider h1{
+    font-size: medium;
+    
+  }
+  .Youtube-Integration{
+    margin: 0%;
+  }
+  .Achievement-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 1rem;
+  }
+  .Gallery-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+  }
+  .GalleryImages{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .Introduction-2{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .Intro-Image{
+    width: 100%;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .Introduction1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .Intro-Header{
+    width: 100%;
+    
+  }
+  .icon-bar{
+    display: none;
+  }
+  .Team-div-Content{
+    display: flex;
+    flex-direction: column;
+  }
+}
+.Team-div-Content .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 300px;
+  margin: 2rem;
+  text-align: center;
+  font-family: arial;
+  border: none;
+  border-radius: 10px;
+  background-color: white;
+  padding-top: 0.8rem;
+}
+
+.Team-div-Content .title {
+  color: grey;
+  font-size: 18px;
+  margin: 1rem;
+}
+.Team-div-Content a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+.testimonial{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+.testimonial .head{
+  margin-top: 1rem;
+  margin-left: 10rem;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size:2rem;
+  color: #13274e;
+}
+.testimonial .head span{
+  color: #f79621;
+}
+
+.testimonial .carousal{
+  width: 50%;
+}
+
+.testimonial .carousal .item{
+  padding: 0 6rem;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 6rem;  
+  margin: 2rem;
+}
+.testimonial .carousal .dot{
+  background-color:  #033F88 !important;
+}
+.testimonial .carousal .item p{
+  font-size: 0.9rem;
+  font-family: "Montserrat", Sans-serif;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+@media only screen and (max-width:  1196px) {
+  .testimonial .head{
+      margin-left: 6rem;
+  }
+  .testimonial .carousal .item{
+      padding: 0 2rem;
+  }
+}
+@media only screen and (max-width:  768px) {
+  .testimonial{
+      margin-top: 5rem;
+      flex-direction: column;
+  }
+  .testimonial .head{
+      margin-left: 0rem;
+      width: 90%;
+  }
+  .md h5{
+      margin: 0;
+      font-size: 1.5rem;
+      text-align: center;
+  }
+  .md span{
+      font-size: 1.5rem;
+  }
+  .heading hr{
+      width: 4rem;
+  }
+  .testimonial .carousal{
+      width: 95%;
+  }
+  .testimonial .carousal .item{
+      padding: 0rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .Youtube-Integration iframe {
+    width: 90%;
+  }
+}
+@media only screen and (max-width:  320px) {
+  .HealthCard .Card{
+    width: 90%;
+  }
+}

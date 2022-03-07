@@ -1,0 +1,165 @@
+.dentaltraveller {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 6rem;
+}
+
+.dentaltraveller p{
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.dentaltraveller .link{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.link a:hover {
+    color: #f79621;
+}
+
+.dentaltraveller h1 {
+    text-align: center;
+}
+
+.dentaltraveller .card {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 6rem;
+}
+
+.dentaltraveller .image {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.dentaltraveller .image img {
+    width: 50%;
+    object-fit: contain;
+
+}
+
+.dentaltraveller .card .content {
+    width: 60%;
+    background-color: rgb(235, 235, 235);
+    text-align: justify;
+    border-radius: 1rem;
+    margin-top: 2rem;
+}
+
+.dentaltraveller .card .content h1 {
+    text-align: center;
+}
+
+.dentaltraveller .content {
+    background-color: #fff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.dentaltraveller .card2 .content {
+    width: 60%;
+    background-color: rgb(235, 235, 235);
+    text-align: justify;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-top: 2rem;
+}
+
+@keyframes slide-in-right {
+    0% {
+        -webkit-transform: translateX(1000px);
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes slide-in-left {
+    0% {
+        -webkit-transform: translateX(-1000px);
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+.slideleft {
+    -webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    margin-left: 10rem;
+}
+
+.slideright {
+    -webkit-animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    margin-right: 2rem;
+}
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .main1{
+      padding: 2rem;
+      width: initial;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px);
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 1rem;
+      height: 100%;  
+    }
+  }
+  @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .main2{
+      padding: 2rem;
+      width: initial;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px);
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 1rem;  
+    }
+  }
+  @media only screen and (max-width: 900px){
+    .dentaltraveller{
+        flex-direction: column;
+        width: 100%;
+    }
+    .dentaltraveller .card{
+        width: 85%;
+        flex-direction: column;
+    }
+    .dentaltraveller .card .content{
+        width: 95%;
+    }
+    .dentaltraveller .image{
+        display: none;
+    }
+
+  }

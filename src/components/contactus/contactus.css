@@ -1,0 +1,211 @@
+.ContactUs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5rem;
+}
+.ContactUsForm {
+  width: 75%;
+  height: 85vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  border-radius: 10px;
+  margin-top: 4rem;
+  background-color: white;
+  box-shadow: 4px 2px 23px -2px rgba(27, 195, 234, 0.23);
+  -webkit-box-shadow: 4px 2px 23px -2px rgba(27, 195, 234, 0.23);
+  -moz-box-shadow: 4px 2px 23px -2px rgba(27, 195, 234, 0.23);
+  overflow: hidden;
+}
+.ContactUsImage {
+  width: 50%;
+  height: initial;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  -webkit-animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  background-color: #13274e;
+}
+@-webkit-keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.ContactUsImage img {
+  width: 95%;
+  height: initial;
+}
+.ContactUsImage h1{
+  text-align: center;
+  font-size: 2.5rem;
+}
+.ContactUs h1 {
+  color: #ffffff;
+  font-family: "Times New Roman", Times, serif;
+}
+.form {
+  background-color: #fff;
+  margin: 2rem;
+  padding: 2rem;
+  -webkit-animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.form h1{
+  color: #13274e;
+}
+@-webkit-keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.ContactUs input[type="text"],
+select {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-bottom: 0.5px solid black;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  font-family: "Times New Roman", Times, serif;
+}
+.ContactUs textarea {
+  border: none;
+  border-bottom: 0.5px solid black;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  font-family: "Times New Roman", Times, serif;
+}
+.ContactUs input[type="submit"] {
+  background-color: #1bc3ea;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.ContactUs input[type="submit"]:hover {
+  background-color: #f79621;
+}
+
+.ContactUs .container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.Address {
+  width: 75%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+  margin: 4rem;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 4px 2px 23px -2px rgba(27, 195, 234, 0.23);
+  -webkit-box-shadow: 4px 2px 23px -2px rgba(27, 195, 234, 0.23);
+  -moz-box-shadow: 4px 2px 23px -2px rgba(27, 195, 234, 0.23);
+}
+.Address iframe {
+  border-radius: 0.5rem;
+}
+.Address h1 {
+  color: #3e3e3e;
+  text-align: center;
+}
+.AddressRow {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+.SocialMedia-div {
+  margin-top: 4rem;
+}
+.SocialMediaRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+@media only screen and (max-width: 900px) {
+  .ContactUsForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+  }
+  .ContactUsImage {
+    display: none;
+  }
+  .Address {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+  .Address iframe{
+    width: 100%;
+  }
+  .Address img {
+    margin: 1rem;
+  }
+}

@@ -1,0 +1,165 @@
+.AppointmentFormContainer {
+  background-color: #f1f1f1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 6rem;
+}
+
+.AppointmentForm {
+  background-color: #fff;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 10px;
+  margin-bottom: 5rem;
+  box-shadow: 4px 2px 23px -2px rgba(27, 195, 234, 0.23);
+  -webkit-box-shadow: 4px 2px 23px -2px rgba(27, 195, 234, 0.23);
+  -moz-box-shadow: 4px 2px 23px -2px rgba(27, 195, 234, 0.23);
+}
+
+.lContent {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  background-color: #13274E;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 10px 0 0 10px ;
+  justify-content: inherit;
+  
+}
+.lContent img{
+  width: 70%;
+  margin-bottom: 4rem;
+}
+.lContent p {
+  padding-top: 1rem;
+  width: 100%;
+  display: none;
+}
+
+.Form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 4rem;
+}
+.Form button{
+  margin-top: 1rem;
+  padding: 1rem 1rem;
+  border-radius: 0.3rem;
+  background-color: #F79621;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+
+}
+.Form h1 {
+  color: #F79621;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.Form p {
+  font-family: 'Times New Roman', Times, serif;
+  color: gray;
+}
+.Form .row{
+  display: flex;
+  justify-content: space-between;
+}
+.Form .col{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 8px 0;
+}
+.Form input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+}
+input[type="date"] { 
+ 
+  padding: 12px 20px;
+  
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+input[type="time"] { 
+  padding: 12px 20px; 
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.Form input[type=submit] {
+  width: 100%;
+  background-color: #89CDFF;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.Form input[type=submit]:hover {
+  background-color: #F79621;
+}
+
+.whatsapp {
+  position: fixed;
+  right: 0px;
+  top: 80%;
+  padding: 1rem;
+  background-color: #f1f1ff;
+  border-radius: 1.5rem;
+
+}
+
+.whatsapp img {
+  height: 2rem;
+  -webkit-box-shadow: -4px 1px 19px -8px rgba(0, 0, 0, 0.32);
+  -moz-box-shadow: -4px 1px 19px -8px rgba(0, 0, 0, 0.32);
+  box-shadow: -4px 1px 19px -8px rgba(0, 0, 0, 0.32);
+
+}
+@media only screen and (max-width: 600px) {
+  .AppointmentForm {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .lContent {
+    width: 100%;
+    padding: 2rem;
+  }
+  .lContent h2{
+    padding: 1rem;
+  }
+  .Form h1 {
+    width: 100%;
+    font-size: 28px;
+    word-wrap:normal;
+  }
+  .Form{
+    width: 90%;
+    margin: 1rem;
+  }
+  .Form input[type="text"],
+select{
+  width: 90%;
+}
+}
