@@ -4,10 +4,12 @@ import { Menu, PhoneCall, X } from "react-feather";
 import { ReactComponent as Whatsapp } from '../../assets/whatsapp.svg'
 import { Link, useLocation } from "react-router-dom";
 import "./navbar.css";
-import logo from "./Pnglogo.svg";
+import logo from "../../assets/logo.png"
 export default function Navbar() {
+  let location = useLocation();
   const [showMenu, setShowMenu] = useState(false);
   const [scrollPosition, setPosition] = useState(0);
+  const [route,setRoute] = useState('/');
   useLayoutEffect(() => {
     function updatePosition() {
       setPosition(window.pageYOffset);
@@ -21,6 +23,10 @@ export default function Navbar() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
+
+  useEffect(()=>{
+    setRoute(location.pathname);
+  },[location])
   return (
     <>
       <nav
@@ -28,15 +34,19 @@ export default function Navbar() {
       >
         <div className="logo">
           <img src={logo} alt="" />
+          <div className="col">
+            <h1>Arera</h1>
+            <span>Dental Care</span>
+          </div>
         </div>
 
         <div className="links">
-          <Link to="/">Home</Link>
-          <Link to="/Procedures">Treatments</Link>
-          <Link to="/Gallery">Our Gallery</Link>
-          <Link to="/Dental-Traveller">Dental Traveller</Link>
-          <Link to="/AboutUs">About Us</Link>
-          <Link to="/ContactUs">Contact Us</Link>
+          <Link to="/" className={route==="/"?"Active":""}>Home</Link>
+          <Link to="/AboutUs" className={route==="/AboutUs"?"Active":""}>About Us</Link>
+          <Link to="/Procedures" className={route==="/Procedures"?"Active":""}>Treatments</Link>
+          <Link to="/Dental-Traveller" className={route==="/Dental-Traveller"?"Active":""}>Dental Tourism</Link>
+          <Link to="/Gallery" className={route==="/Gallery"?"Active":""}>Gallery</Link>
+          <Link to="/ContactUs" className={route==="/ContactUs"?"Active":""}>Contact Us</Link>
         </div>
         <div className="info">
           <div className="col">
@@ -48,7 +58,7 @@ export default function Navbar() {
           <div className="col">
             <h3>For Online Consultation</h3>
             <div className="row">
-              <Whatsapp /> <a href="tel:+919893022115">Consult Online</a>
+              <Whatsapp /> <a href="https://api.whatsapp.com/send?phone=917880008868" rel="noreferrer"  target="_blank">Consult Online</a>
             </div>
           </div>
         </div>
@@ -83,11 +93,12 @@ export default function Navbar() {
               </button>
             </div>
             <div className="links">
-              <Link to="/">Home</Link>
-              <Link to="/Procedures">Procedures</Link>
-              <Link to="/Gallery">Our Gallery</Link>
-              <Link to="/AboutUs">About Us</Link>
-              <Link to="/ContactUs">Contact Us</Link>
+            <Link to="/" className={route==="/"?"Active":""}>Home</Link>
+          <Link to="/AboutUs" className={route==="/AboutUs"?"Active":""}>About Us</Link>
+          <Link to="/Procedures" className={route==="/Procedures"?"Active":""}>Treatments</Link>
+          <Link to="/Dental-Traveller" className={route==="/Dental-Traveller"?"Active":""}>Dental Tourism</Link>
+          <Link to="/Gallery" className={route==="/Gallery"?"Active":""}>Gallery</Link>
+          <Link to="/ContactUs" className={route==="/ContactUs"?"Active":""}>Contact Us</Link>
               <div className="info">
                 <div className="col">
                   <h3>Call Us At</h3>
@@ -98,10 +109,10 @@ export default function Navbar() {
                 <div className="col">
                   <h3>For Online Consultation</h3>
                   <div className="row">
-                    <Whatsapp /> <a href="tel:+919893022115">Consult Online</a>
+                    <Whatsapp /><a href="https://api.whatsapp.com/send?phone=917898777836" rel="noreferrer"  target="_blank">Consult Online</a>
                   </div>
                 </div>
-              </div>
+              </div>  
             </div>
           </motion.div>
         </AnimatePresence>

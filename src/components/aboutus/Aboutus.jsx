@@ -47,20 +47,18 @@ export default function Aboutus() {
       <Card2
         img={picture}
         heading={"Who We Are ?"}
-        contents={`At Arera Dental Care, we are honoured for servicing all people with the finest dental health care facilities.\n
-            Our dental care clinic, driven by state-of-the-art infrastructure facilities with a committed & well-trained workforce, has built a niche in the dental market by providing outstanding oral and dental facilities at all levels. We ensure that our patients are treated with the greatest attention and care. Our dental experts use the latest modern tools and technologies to give you an award-winning smile and an elegant look.
-            `}
+        contents={`At Arera Dental Care, we are honored for servicing all people with the finest dental health care facilities. Our dental care clinic, driven by state-of-the-art infrastructure facilities with a committed & well-trained workforce, has built a niche in the dental market by providing outstanding oral and dental facilities at all levels. We ensure that our patients are treated with the greatest attention and care. Our dental experts use the latest modern tools and technologies to give you an award-winning smile and an elegant look.`}
       ></Card2>
       <Card1
         img={log}
         heading={"Our Vision"}
-        contents={`Our dental care clinic, has to built a niche in the dental market by providing outstanding oral and dental facilities at all levels.  Since its establishment, we have been committed to providing the best by using the most advanced technology available and provide a complete range of dental care. `}
+        contents={`Our dental care clinic has to build a niche in the dental market by providing outstanding oral and dental facilities at all levels. Since its establishment, we have been committed to providing the best by using the most advanced technology available and providing a complete range of dental care. `}
       ></Card1>
 
       <Card2
         img={logo}
         heading={"Our Mission"}
-        contents={`Since its establishment, we have been committed to providing the best by using the most advanced technology available and provide a complete range of dental care. Our qualified professional orthodontists are specialized in all types of solutions for dental care. No matter how simple or complex the requirement of our patient is in comfortable environments we are able to provide the highest standard of patient care. We would make you feel like part of our family when you first connect with our team and enjoy your new smile with family and friends.  `}
+        contents={`Since its establishment, we have been committed to providing the best by using the most advanced technology available and providing a complete range of dental care. Our qualified professional orthodontists specialize in all types of solutions for dental care. No matter how simple or complex the requirement of our patients in their comfortable environment, we are providing the highest standard of patient care. We would make you feel like part of our family when you first connect with our team and enjoy your new smile with family and friends.`}
       ></Card2>
       <div className="responsibility">
         <div className="head">
@@ -69,7 +67,7 @@ export default function Aboutus() {
         <div ref={ref} className="col">
           <ul>
             <motion.li animate={left}>
-              Accurately assess your dental condition
+            Accurately assess your dental requirements.
             </motion.li>
             <motion.li animate={right}>
               Educate you about tooth replacement and other options

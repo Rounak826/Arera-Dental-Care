@@ -8,29 +8,39 @@
 .Footer h3{
   font-size: 1.8rem;
   color: #ffffff;
-  font-family: 'Times New Roman', Times, serif;
+
 }
-.logo h2{
+.Footer .logo h2{
+  min-width: 270px;
   font-size: 2rem;
   color: white;
-  font-family: 'Times New Roman', Times, serif;
   margin: 0rem;
 }
-.logo{
+.Footer .logo{
   width: 20%;
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
 }
+.Footer .time{
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #fff;
+}
 .Footer img{
   width: 60%;
 }
-.Row {
+.Footer .Row {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
  gap: 0; 
+}
+.Footer .row{
+  flex-direction: row;
 }
 .quicklinks{
   width: 25%;
@@ -90,12 +100,15 @@ margin-top: 0.5rem;
 
 }
 .contact .row{
+  display: flex;
   justify-content: flex-start;
+  flex-direction: row;
 }
 .contact .col{
   margin-top: 1rem;
   align-items: flex-start;
 }
+
 @media only screen and (max-width: 900px){
   .Footer{
     width: 100%;
@@ -114,5 +127,39 @@ margin-top: 0.5rem;
   .contact{
     width: 100%;
     text-align: center;
+  }
+    .contact .col{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .contact .row{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+}
+@media only screen and (max-width: 768px){
+  .Footer .Row {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   gap: 0; 
+  }
+  .Footer .logo{
+    width: 40%;
+  }
+  .contact .column{
+    align-items: center;
+  }
+  .contact .col{
+    width: 80%;
+    align-items: flex-start;
+    text-align: left;
   }
 }

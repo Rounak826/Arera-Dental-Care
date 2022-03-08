@@ -25,12 +25,15 @@ const List = [
   {
     name: "Smriti Jain",
     feedback:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ut laudantium voluptate delectus, nam nobis qui sed maiores beatae ab!",
+      `Medical advice and checkup 
+      24x7 support
+      Proper hygiene
+      Online consultation available`,
   },
   {
-    name: "jhone doe",
+    name: "Rounak Bisen",
     feedback:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit nam nobis qui s met consectetur adipisicing elit. Soluta ut",
+      "Very pleasant indeed! Dr Swapnil Jain is a great doctor who listens to the patient and takes care of him/her with great attention.",
   },
 ];
 export const Home = () => {
@@ -55,8 +58,8 @@ export const Home = () => {
                 <span className="Mods">Family</span>
               </h1>
               <p>
-                At Arera Dental Care, we are honoured for servicing all people
-                with the finest dental health care facilities.
+                At Arera Dental Care, we are honored for servicing all
+                people with the finest dental health care facilities.
               </p>
               <Link to={"/BookAppointment"} className="btn">
                 Book Appointment+
@@ -87,15 +90,8 @@ export const Home = () => {
           </div>
           <div className="Content-Intro">
             <p>
-              At Arera Dental Care, we are honoured for servicing all people
-              with the finest dental health care facilities. Our dental care
-              clinic, driven by state-of-the-art infrastructure facilities with
-              a committed & well-trained workforce, has built a niche in the
-              dental market by providing outstanding oral and dental facilities
-              at all levels. We ensure that our patients are treated with the
-              greatest attention and care. Our dental experts use the latest
-              modern tools and technologies to give you an award-winning smile
-              and an elegant look.
+              At Arera Dental Care, we are honored for servicing all people with the finest dental health care facilities. Our dental care clinic, driven by state-of-the-art infrastructure facilities with a committed & well-trained workforce, has built a niche in the dental market by providing outstanding oral and dental facilities at all levels. We ensure that our patients are treated with the greatest attention and care. Our dental experts use the latest modern tools and technologies to give you an award-winning smile and an elegant look.
+
             </p>
           </div>
         </div>
@@ -154,13 +150,9 @@ export const Home = () => {
             <span className="Mods">Best Dental Care </span> !
           </h1>
           <p>
-            Our dental care clinic, driven by state-of-the-art infrastructure
-            facilities with a committed & well-trained workforce, has built a
-            niche in the dental market by providing outstanding oral and dental
-            facilities at all levels. We ensure that our patients are treated
-            with the greatest attention and care. Our dental experts use the
-            latest modern tools and technologies to give you an award-winning
-            smile and an elegant look.{" "}
+            Our dental care clinic, driven by state-of-the-art infrastructure facilities with a committed & well-trained workforce, has built a niche in the dental market by providing outstanding oral and dental facilities at all levels. We ensure that our patients are treated with the greatest attention and care. Our dental experts use the latest modern tools and technologies to give you an award-winning smile and an elegant look.
+
+            {" "}
           </p>
         </div>
         <div className="Intro-Image">
@@ -187,31 +179,35 @@ export const Home = () => {
           </div>
         </div>
         <div className="Team-Button">
-        <Link to={"/Team"} className="Team-Button">
-           View More!
+          <Link to={"/Team"} className="Team-Button">
+            View More!
           </Link>
-          </div>
+        </div>
       </div>
       <div className="HealthCard">
         <div className="Card">
           <img src={healthlogo1} alt="" />
-          <h3>Medical Advice & Check Ups!</h3>
+          <h3>Medical Advice & Check Ups!
+          </h3>
           <p>Consult any of our doctor by vising anytime!</p>
         </div>
         <div className="Card">
           <img src={healthlogo2} alt="" />
-          <h3>Medical Advice & Check Ups!</h3>
-          <p>Consult any of our doctor by vising anytime!</p>
+          <h3>Trusted medical treatment
+          </h3>
+          <p>free or low cost covrage with adult income</p>
         </div>
         <div className="Card">
           <img src={healthlogo3} alt="" />
-          <h3>Medical Advice & Check Ups!</h3>
-          <p>Consult any of our doctor by vising anytime!</p>
+          <h3>Emergency help Available 24 x 7
+          </h3>
+          <p>Contact our reception staff with any medical emergency anytime!</p>
         </div>
         <div className="Card">
           <img src={healthlogo4} alt="" />
-          <h3>Medical Advice & Check Ups!</h3>
-          <p>Consult any of our doctor by vising anytime!</p>
+          <h3>Medical Research Professional
+          </h3>
+          <p>provides all medical aspacts pratices for whole family</p>
         </div>
       </div>
       <div className="testimonial">

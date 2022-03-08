@@ -10,7 +10,7 @@
     font-size: 1.2rem;
 }
 .aboutus .card .content:hover {
-    background-color:#89cdff;
+    background-color:#ffa538;
 }
 .aboutus .card .content h1{
     color: #13274e
@@ -103,7 +103,7 @@
     }
 }
 
-@-webkit-keyframes slide-in-left {
+@keyframes slide-in-left {
     0% {
         -webkit-transform: translateX(-1000px);
         transform: translateX(-1000px);

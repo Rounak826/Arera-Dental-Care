@@ -11,15 +11,8 @@ export default function Gallery() {
       <div className="Gallery-Header">
         <h1>Explore Our  <span className="Mods">Gallery</span>  !</h1>
       </div>
-      <div className="Gallery-Para">
-        <p>
-          {" "}
-          Our administration and support staff all have exceptional people
-          skilled and trained to assist you with all the medical enquiries
-        </p>
-      </div>
       <div className="Slider">
-        <Carousel showArrows={true} showStatus={false} thumbWidth={200}>
+        <Carousel showArrows={true} showStatus={false}>
           <div className="Images">
             <img src={Slide1} alt="" />
           </div>

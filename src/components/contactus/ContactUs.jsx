@@ -2,9 +2,14 @@ import React, { useState } from "react";
 import "./contactus.css";
 import contactuslogo from "./contactuslogo.svg";
 import { Mail, MapPin, PhoneCall } from "react-feather";
+import Alert from "../Alert/Alert";
 export const ContactUs = () => {
   const [loading, setLoading] = useState(false);
-
+  const [message, setMessage] = useState({
+    status: false,
+    message: "",
+    error: false
+  })
 
  
 
@@ -18,7 +23,7 @@ export const ContactUs = () => {
     const form = document.forms['contactUs']
     let data = new FormData(form)
     let row = [
-      [data.get("firstname"), data.get("lastname"), data.get("query")]
+      [data.get("firstname"), data.get("lastname"), data.get("number"),data.get("query")]
     ]
 
     console.log(row)
@@ -33,8 +38,26 @@ export const ContactUs = () => {
     //console.log(data.get("name"));
     fetch(scriptURL, requestOptions)
       .then(response => response.text())
-      .then(result => {console.log(result)})
-      .catch(error => console.log('error', error));
+      .then(result => {
+        console.log(result)
+        setMessage(
+          {
+            status: true,
+            message: "Query Sent Successfully!",
+            error: false
+          }
+        )
+      })
+      .catch(error => {
+        console.log('error', error)
+        setMessage(
+          {
+            status: true,
+            message: "Failed To send Query",
+            error: false
+          }
+        )
+      });
   }
 
   return (
@@ -47,12 +70,14 @@ export const ContactUs = () => {
         <div className="form">
           <h1>Contact US</h1>
           <form name="contactUs" onSubmit={HandleSubmit}>
+          {message.status&&<Alert error={message.error} message={message.message} />}
             <label htmlFor="firstname">First Name</label>
             <input
               type="text"
               id="fname"
               name="firstname"
               placeholder="Your name.."
+              required
             />
 
             <label htmlFor="lastname">Last Name</label>
@@ -61,7 +86,17 @@ export const ContactUs = () => {
               id="lname"
               name="lastname"
               placeholder="Your last name.."
+              required
             />
+            <label htmlFor="number">Contact Number</label>
+            <input
+              type="text"
+              id="lname"
+              name="number"
+              placeholder="+919999777888"
+              required
+            />
+
 
             <label htmlFor="subject">Query</label>
             <textarea
@@ -69,6 +104,7 @@ export const ContactUs = () => {
               name="query"
               placeholder="Write something.."
               rows={7}
+              required
             ></textarea>
 
             <input type="submit" value={loading?"Sending...":"Submit"} />

@@ -2,6 +2,7 @@ import React from "react";
 import "./team.css";
 import teamimage from "./profile-pic.png";
 import image from "./profile-pic (1).png"
+import imagePlaceholder from "../../assets/male-placeholder.jpeg"
 export default function Team() {
   return (
     <div className="Team-Container">
@@ -38,7 +39,7 @@ export default function Team() {
         <div className="column">
           <div className="card">
             <div className="container">
-              <img src={teamimage} alt="" />
+              <img src={imagePlaceholder} alt="" />
               <h2>Dr Ankit Pandey</h2>
               <p className="title">BDS,MDS,Fellowship in TMJ</p>
               <p>Oral and Maxillo Facial Surgeon
@@ -51,7 +52,7 @@ export default function Team() {
         <div className="column">
           <div className="card">
             <div className="container">
-              <img src={image} alt="" />
+              <img src={imagePlaceholder} alt="" />
               <h2>Dr  Harsh Mahajan
               </h2>
               <p className="title">BDS,MDS
@@ -65,7 +66,7 @@ export default function Team() {
         <div className="column">
           <div className="card">
             <div className="container">
-              <img src={teamimage} alt="" />
+              <img src={imagePlaceholder} alt="" />
               <h2>Dr Ankit Pandey</h2>
               <p className="title">BDS,MDS,Fellowship in TMJ</p>
               <p>Oral and Maxillo Facial Surgeon

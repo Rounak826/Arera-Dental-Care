@@ -7,8 +7,8 @@
 }
 
 .dentaltraveller p{
-    font-size: 1.4rem;
-    font-weight: 400;
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 
 .dentaltraveller .link{
@@ -91,7 +91,7 @@
     }
 }
 
-@-webkit-keyframes slide-in-left {
+@keyframes slide-in-left {
     0% {
         -webkit-transform: translateX(-1000px);
         transform: translateX(-1000px);
@@ -118,12 +118,12 @@
     margin-right: 2rem;
 }
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-    .main1{
-      padding: 2rem;
+    .main{
+      padding: 1rem;
       width: initial;
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
+      justify-content: flex-start;
       align-items: center;
       -webkit-backdrop-filter: blur(5px);
       backdrop-filter: blur(5px);
@@ -132,20 +132,7 @@
       height: 100%;  
     }
   }
-  @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-    .main2{
-      padding: 2rem;
-      width: initial;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      -webkit-backdrop-filter: blur(5px);
-      backdrop-filter: blur(5px);
-      background-color: rgba(255, 255, 255, 0.2);
-      border-radius: 1rem;  
-    }
-  }
+
   @media only screen and (max-width: 900px){
     .dentaltraveller{
         flex-direction: column;

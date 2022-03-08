@@ -1,0 +1,41 @@
+.btn-primary{
+    text-decoration: none;
+    position: fixed;
+    top: 87%;
+    right:4rem;
+    width: fit-content;
+    padding: 0.5rem 2rem;
+    background-color: #023E8A;
+    border: solid 2px rgba(255, 255, 255, 0);
+    color: #fff !important;
+    border-radius: 1.4rem;
+    transition: all 0.2s ease ;
+}
+.btn-primary:hover{
+    background-color: rgb(255, 174, 0);
+    color: #ffffff !important;
+}
+.pc{
+    display: block;
+}
+.mobile{
+    display: none;
+}
+@media only screen and (max-width: 1196px) {
+    .btn-primary{
+         padding: 0.5rem 1rem;
+    }
+ }
+ @media only screen and (max-width: 768px) {
+    .btn-primary{
+        padding: 0.8rem;
+        top: 87%;
+        left:2rem;
+   }
+     .pc{
+         display: none;
+     }
+     .mobile{
+         display: block;
+     }
+ }

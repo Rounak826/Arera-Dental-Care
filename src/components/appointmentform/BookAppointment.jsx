@@ -1,13 +1,70 @@
 import React, { useState } from "react";
 import "./bookappointment.css";
 import emailjs from "emailjs-com";
-import logo from './whataap logo.png'
 import illustration from '../../assets/bookAppointment.svg'
+import Alert from '../../components/Alert/Alert'
+import { AlertCircle } from "react-feather";
 export default function BookAppointment() {
 
   const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState({
+    status: false,
+    message: "",
+    error: false
+  })
+  function validateEmail(mail) {
+    console.log(mail)
+    if (/^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
+      setMessage({
+        status: false,
+        message: "",
+        error: false
+      })
+      return true;
+    } else {
+      setMessage({
+        status: true,
+        message: "Enter Valid Email",
+        error: true
+      })
+      scrollToTargetAdjusted("Form-alert")
+      setLoading(false);
+      return false;
+    }
 
-  
+  }
+  function validatePhone(number) {
+    console.log(number);
+    if (number.length === 13) {
+      setMessage({
+        status: false,
+        message: "",
+        error: false
+      })
+    } else {
+      setMessage({
+        status: true,
+        message: "Enter Valid Phone Number",
+        error: true
+      })
+      setLoading(false);
+      scrollToTargetAdjusted("Form-alert")
+    }
+    return (number.length === 13);
+  }
+  function validation(email, phone) {
+    let flag = true;
+    if (!validateEmail(email)) {
+      flag = false;
+
+    } else if (!validatePhone(phone)) {
+      flag = false;
+    } else {
+      flag = true;
+    }
+    console.log(flag)
+    return flag
+  }
 
   const HandleSubmit = (e) => {
     e.preventDefault();
@@ -19,10 +76,9 @@ export default function BookAppointment() {
     const form = document.forms['AppointmentForm']
     let data = new FormData(form)
     let row = [
-      [data.get("name"), data.get("number"), data.get("email"), data.get("age"), data.get("AppointmentDate"), data.get("AppointmentTime"), data.get("procedure")]
+      [data.get("name"), data.get("number"), data.get("email"), data.get("age"),data.get("gender"), data.get("AppointmentDate"), data.get("AppointmentTime"), data.get("procedure")]
     ]
 
-    console.log(row)
     var requestOptions = {
       method: "post",
       headers: myHeaders,
@@ -30,17 +86,24 @@ export default function BookAppointment() {
       body: JSON.stringify(row)
     };
 
+    if (
+      validation(data.get("email"), data.get("number"))
 
+    ) {
+      fetch(scriptURL, requestOptions)
+        .then(response => response.text())
+        .then(result => {
+
+          console.log(result)
+
+          sendEmail(e);
+        })
+        .catch(error => console.log('error', error));
+    } else {
+      console.log(validation(data.get("email"), data.get("number")));
+    }
     //console.log(data.get("name"));
-    fetch(scriptURL, requestOptions)
-      .then(response => response.text())
-      .then(result => {
-        
-        console.log(result)
-      
-        sendEmail(e);
-      })
-      .catch(error => console.log('error', error));
+    /**/
   }
   function sendEmail(e) {
     e.preventDefault();
@@ -49,15 +112,28 @@ export default function BookAppointment() {
       .then((result) => {
         console.log(result.text);
         setLoading(false)
+        setMessage({
+          status: true,
+          message: "Appointment Booked Successfully!",
+          error: false
+        })
+        scrollToTargetAdjusted("Form-alert")
       }, (error) => {
         console.log(error.text);
         setLoading(false)
+        setMessage({
+          status: true,
+          message: "Failed to Book Appointment!",
+          error: true
+        })
+        scrollToTargetAdjusted("Form-alert")
       });
     e.target.reset()
   }
   return (
     <div className="AppointmentFormContainer">
       <div className="AppointmentForm">
+
         <div className="lContent">
           <img src={illustration} alt="" />
           <h2>
@@ -75,13 +151,16 @@ export default function BookAppointment() {
           <p>Please feel welcome to contact our friendly reception staff with any general
             or medical enquiry. Our doctors will recive or return any urgent calls.
           </p>
+
           <form name="AppointmentForm" onSubmit={HandleSubmit}>
+            {message.status && <Alert error={message.error} message={message.message} />}
             <label htmlFor="name">First Name</label>
             <input
               type="text"
               id="name"
               name="name"
               placeholder="Your name.."
+              required
             />
 
             <label htmlFor="name">Contact No</label>
@@ -89,7 +168,8 @@ export default function BookAppointment() {
               type="text"
               id="name"
               name="number"
-              placeholder="Your number.."
+              placeholder="+919997777666"
+              required
             />
             <label htmlFor="name">Email</label>
             <input
@@ -97,20 +177,35 @@ export default function BookAppointment() {
               id="email"
               name="email"
               placeholder="Your email.."
+              required
             />
-
-            <label htmlFor="Age">Age:</label>
-            <input type="text" id="age" name="age" placeholder="Your Age.." />
 
             <div className="row">
               <div className="col">
-                <label htmlFor="date">Date:</label>
-                <input type="date" id="date" name="AppointmentDate" />
+
+                <label htmlFor="Age">Age:</label>
+                <input type="text" id="age" name="age" placeholder="Your Age.." required />
               </div>
               <div className="col">
-                <label htmlFor="Time">Time</label>
-                <input type="time" id="time" name="AppointmentTime" />
+                <label htmlFor="gender">Gender</label>
+                <select name="gender">
+                  <option value="male">Male</option>
+                  <option value="female">Female</option> 
+                  <option value="Other">Other</option> 
+                </select>
               </div>
+            </div>
+            <div className="row">
+              <div className="col">
+                <label htmlFor="date">Date:</label>
+                <input type="date" id="date" name="AppointmentDate" required />
+              </div>
+              <div className="col has-tooltip">
+                <label htmlFor="Time">Time</label>
+                <input type="time" id="time" name="AppointmentTime" required />
+                <div className="tooltip"><AlertCircle /><p>Choose time between 6:30 Pm to 9:00 Pm</p></div>
+              </div>
+              
             </div>
 
 
@@ -120,16 +215,23 @@ export default function BookAppointment() {
               id="Procedure"
               name="procedure"
               placeholder="Your Procedure.."
+              required
             />
             <button type="submit" value="Book Appointment" name="Book Appointment">{loading ? "Sending..." : "Submit  "}</button>
           </form>
         </div>
       </div>
-      <div className="whatsapp">
-        <a href="https://api.whatsapp.com/send?phone=917898777836" rel="noreferrer"  target="_blank">
-          <img src={logo} alt='' />
-        </a>
-      </div>
     </div>
   )
+}
+function scrollToTargetAdjusted(id) {
+  var element = document.getElementById(id);
+  var headerOffset = 100;
+  var elementPosition = element.getBoundingClientRect().top;
+  var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+  window.scrollTo({
+    top: offsetPosition,
+    behavior: "smooth"
+  });
 }

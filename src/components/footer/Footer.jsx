@@ -2,7 +2,7 @@ import React from "react";
 import "./footer.css";
 import logo from "./logo.png";
 import { Link } from "react-router-dom";
-import { Facebook, Instagram, Mail, MapPin, PhoneCall, Youtube } from "react-feather";
+import { Clock, Facebook, Instagram, Mail, MapPin, PhoneCall, Youtube } from "react-feather";
 export const Footer = () => {
   return (
     <div className="Footer">
@@ -11,6 +11,10 @@ export const Footer = () => {
           <div className="logo">
             <img src={logo} alt="" />
             <h2>Arera Dental Clinic</h2>
+            <div className="time">
+              <Clock/>
+               <p>6:30 Pm to 9 Pm</p>
+            </div>
           </div>
           <div className="quicklinks">
             <h3>Quick Links</h3>

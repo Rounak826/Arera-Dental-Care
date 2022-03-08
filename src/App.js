@@ -13,6 +13,7 @@ import Team from "./components/team/Team";
 import Dentaltraveller from './components/dentaltraveller/Dentaltraveller'
 import BookAppointment from "./components/appointmentform/BookAppointment";
 import SocialMedia from './components/SocialMediaBar/SocialMedia';
+import FloatingButton from './components/floatingButton/FloatingButton';
 import {Footer} from './components/footer/Footer'
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path="/Dental-Traveller" element={<Dentaltraveller/>} />
         </Routes>
       <SocialMedia/>
+      <FloatingButton/>
       <Footer />
       </Router>
     </div>

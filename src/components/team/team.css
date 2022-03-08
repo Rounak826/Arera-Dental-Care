@@ -26,8 +26,9 @@
   box-sizing: border-box;
 }
 
-.container img {
+.Team-Container .container img {
   width: 30%;
+  border-radius: 50%;
 }
 
 .Team-Container *, *:before, *:after {
