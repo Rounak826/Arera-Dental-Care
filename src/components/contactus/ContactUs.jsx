@@ -65,10 +65,10 @@ export const ContactUs = () => {
       <div className="ContactUsForm">
         <div className="ContactUsImage">
           <img src={contactuslogo} alt="" />
-          <h1>Arera Dental Clinic</h1>
+          <h2>Arera Dental Clinic</h2>
         </div>
         <div className="form">
-          <h1>Contact US</h1>
+          <h1>Contact Us</h1>
           <form name="contactUs" onSubmit={HandleSubmit}>
           {message.status&&<Alert error={message.error} message={message.message} />}
             <label htmlFor="firstname">First Name</label>
@@ -93,7 +93,7 @@ export const ContactUs = () => {
               type="text"
               id="lname"
               name="number"
-              placeholder="+919999777888"
+              placeholder="91-8149931718"
               required
             />
 

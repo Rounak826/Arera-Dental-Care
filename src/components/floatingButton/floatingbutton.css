@@ -10,16 +10,25 @@
     color: #fff !important;
     border-radius: 1.4rem;
     transition: all 0.2s ease ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: white;
 }
 .btn-primary:hover{
     background-color: rgb(255, 174, 0);
     color: #ffffff !important;
+    fill: #5e5e5e;
 }
 .pc{
     display: block;
 }
 .mobile{
     display: none;
+}
+.mobile svg{
+    width: 1.8rem;
+    
 }
 @media only screen and (max-width: 1196px) {
     .btn-primary{

@@ -20,20 +20,28 @@ export const Footer = () => {
             <h3>Quick Links</h3>
             <ul>
               <li>
-                <Link to={"/Home"}>Home</Link>
-              </li>
-              <li>
-                <Link to={"/ContactUs"}>ContactUs</Link>
-              </li>
-              <li>
-                <Link to={"/Procedures"}>Procedures</Link>
-              </li>
-              <li>
-                <Link to={"/BookAppointment"}>Book Appointment</Link>
+                <Link to={"/"}>Home</Link>
               </li>
               <li>
                 <Link to={"/AboutUs"}>About Us</Link>
               </li>
+              <li>
+                <Link to={"/Procedures"}>Treatments</Link>
+              </li>
+              <li>
+                <Link to={"/Dental-Traveller"}>Dental Tourism</Link>
+              </li>
+              <li>
+                <Link to={"/Gallery"}>Gallery</Link>
+              </li>
+              <li>
+                <Link to={"/ContactUs"}>Contact Us</Link>
+              </li>
+             
+              <li>
+                <Link to={"/BookAppointment"}>Book Appointment</Link>
+              </li>
+              
               <li>
                 <Link to={"/Team"}>Our Team</Link>
               </li>
@@ -74,18 +82,15 @@ export const Footer = () => {
             <div className="col">
               <a href="tel:+91 9893022115"><PhoneCall />+91 9893022115</a>
               <a href="mailto:drswapniljain@yahoo.co.in"><Mail />drswapniljain@yahoo.co.in</a>
-              <p className="address">
-                <MapPin />  #28, Manisha Market, opp Shahpura Lake, Bhopal.
-              </p>
+              <div className="address">
+                <span>
+                <MapPin /> 
+                </span>
+                <p>#28, Manisha Market, opp Shahpura Lake, Bhopal.</p> 
+              </div>
             </div>
             </div>
           </div>
-        </div>
-        <hr />
-        <div className="Row">
-          <Link to="/">Privacy Policy</Link>
-
-          <Link to="/">Terms & Conditions</Link>
         </div>
       </footer>
     </div>

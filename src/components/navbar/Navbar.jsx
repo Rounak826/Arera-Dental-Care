@@ -9,7 +9,7 @@ export default function Navbar() {
   let location = useLocation();
   const [showMenu, setShowMenu] = useState(false);
   const [scrollPosition, setPosition] = useState(0);
-  const [route,setRoute] = useState('/');
+  const [route, setRoute] = useState('/');
   useLayoutEffect(() => {
     function updatePosition() {
       setPosition(window.pageYOffset);
@@ -24,9 +24,22 @@ export default function Navbar() {
     window.scrollTo(0, 0);
   }, [pathname]);
 
-  useEffect(()=>{
+  useEffect(() => {
     setRoute(location.pathname);
-  },[location])
+  }, [location])
+
+  useEffect(() => {
+
+
+    if(showMenu){
+      let app  = document.getElementById('empty');
+      app.addEventListener('click', function() {
+         setShowMenu(false)
+      })
+    }
+    
+  }, [showMenu])
+
   return (
     <>
       <nav
@@ -41,24 +54,24 @@ export default function Navbar() {
         </div>
 
         <div className="links">
-          <Link to="/" className={route==="/"?"Active":""}>Home</Link>
-          <Link to="/AboutUs" className={route==="/AboutUs"?"Active":""}>About Us</Link>
-          <Link to="/Procedures" className={route==="/Procedures"?"Active":""}>Treatments</Link>
-          <Link to="/Dental-Traveller" className={route==="/Dental-Traveller"?"Active":""}>Dental Tourism</Link>
-          <Link to="/Gallery" className={route==="/Gallery"?"Active":""}>Gallery</Link>
-          <Link to="/ContactUs" className={route==="/ContactUs"?"Active":""}>Contact Us</Link>
+          <Link to="/" className={route === "/" ? "Active" : ""}>Home</Link>
+          <Link to="/AboutUs" className={route === "/AboutUs" ? "Active" : ""}>About Us</Link>
+          <Link to="/Procedures" className={route === "/Procedures" ? "Active" : ""}>Treatments</Link>
+          <Link to="/Dental-Traveller" className={route === "/Dental-Traveller" ? "Active" : ""}>Dental Tourism</Link>
+          <Link to="/Gallery" className={route === "/Gallery" ? "Active" : ""}>Gallery</Link>
+          <Link to="/ContactUs" className={route === "/ContactUs" ? "Active" : ""}>Contact Us</Link>
         </div>
         <div className="info">
           <div className="col">
-            <h3>Call Us At</h3>
+            <h4>Call Us At</h4>
             <div className="row">
               <PhoneCall /> <a href="tel:+919893022115">+919893022115</a>
             </div>
           </div>
           <div className="col">
-            <h3>For Online Consultation</h3>
+            <h4>For Online Consultation</h4>
             <div className="row">
-              <Whatsapp /> <a href="https://api.whatsapp.com/send?phone=917880008868" rel="noreferrer"  target="_blank">Consult Online</a>
+              <Whatsapp /> <a href="https://api.whatsapp.com/send?phone=917880008868" rel="noreferrer" target="_blank">Consult Online</a>
             </div>
           </div>
         </div>
@@ -82,6 +95,10 @@ export default function Navbar() {
             exit={{ opacity: 0, x: "+10vw" }}
             className="sideBar"
           >
+            <div className="empty" id='empty'>
+            
+            </div>
+            <div className="bar">
             <div className="top">
               <button
                 onClick={() => {
@@ -93,27 +110,29 @@ export default function Navbar() {
               </button>
             </div>
             <div className="links">
-            <Link to="/" className={route==="/"?"Active":""}>Home</Link>
-          <Link to="/AboutUs" className={route==="/AboutUs"?"Active":""}>About Us</Link>
-          <Link to="/Procedures" className={route==="/Procedures"?"Active":""}>Treatments</Link>
-          <Link to="/Dental-Traveller" className={route==="/Dental-Traveller"?"Active":""}>Dental Tourism</Link>
-          <Link to="/Gallery" className={route==="/Gallery"?"Active":""}>Gallery</Link>
-          <Link to="/ContactUs" className={route==="/ContactUs"?"Active":""}>Contact Us</Link>
+              <Link to="/" className={route === "/" ? "Active" : ""}>Home</Link>
+              <Link to="/AboutUs" className={route === "/AboutUs" ? "Active" : ""}>About Us</Link>
+              <Link to="/Procedures" className={route === "/Procedures" ? "Active" : ""}>Treatments</Link>
+              <Link to="/Dental-Traveller" className={route === "/Dental-Traveller" ? "Active" : ""}>Dental Tourism</Link>
+              <Link to="/Gallery" className={route === "/Gallery" ? "Active" : ""}>Gallery</Link>
+              <Link to="/ContactUs" className={route === "/ContactUs" ? "Active" : ""}>Contact Us</Link>
               <div className="info">
                 <div className="col">
-                  <h3>Call Us At</h3>
+                  <h4>Call Us At</h4>
                   <div className="row">
                     <PhoneCall /> <a href="tel:+919893022115">+919893022115</a>
                   </div>
                 </div>
                 <div className="col">
-                  <h3>For Online Consultation</h3>
+                  <h4>For Online Consultation</h4>
                   <div className="row">
-                    <Whatsapp /><a href="https://api.whatsapp.com/send?phone=917898777836" rel="noreferrer"  target="_blank">Consult Online</a>
+                    <Whatsapp /><a href="https://api.whatsapp.com/send?phone=917898777836" rel="noreferrer" target="_blank">Consult Online</a>
                   </div>
                 </div>
-              </div>  
+              </div>
             </div>
+            </div>
+            
           </motion.div>
         </AnimatePresence>
       )}

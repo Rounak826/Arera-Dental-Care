@@ -278,6 +278,7 @@ justify-content: center;
   font-size: 1.1rem;
   color: rgb(83, 83, 83);
   word-wrap:break-word;
+  text-align: justify ;
 }
 .Intro-Image{
   width: 50%;
@@ -337,7 +338,7 @@ align-items: center;
 .HealthCard .Card{
   width: 22%;
   min-width: 225px;
-  background-color: #89CDFF;
+  background-color: #13274E;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -429,99 +430,15 @@ margin-top:-15px;
   color: white;
 }
 .Team-Button{
- background-color: #86afff;
+ background-color: #89CDFF;
  color: white;
  margin: 1rem;
  padding: 1rem;
  text-decoration: none;
  border-radius: 10px;
 }
-@media only screen and (max-width: 900px) {
-  .HomeContainer{
-    width: 100%;
-    display: flex;  
-    flex-direction: column;
-    align-items: center;
-  }
-  .Introduction1{
-    clip-path: polygon(100% 0, 100% 95%, 57% 100%, 0 94%, 0 0);
-    align-items: center;
-  }
-  .Intro-Content{
-    width: 100%;
-  }
-  .Header-Intro h1{
-    width: 90%;
-  }
-  .Youtube-Integration{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  
-  }
-  .HealthCard{
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
-}
-@media only screen and (max-width: 900px){
-  .Slider{
-    width: 100%;
-    margin-top: 0%;
-  }
-  .Slider h1{
-    font-size: medium;
-    
-  }
-  .Youtube-Integration{
-    margin: 0%;
-  }
-  .Achievement-div{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding-top: 1rem;
-  }
-  .Gallery-div{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
 
-  }
-  .GalleryImages{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  .Introduction-2{
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: space-around;
-    align-items: center;
-  }
-  .Intro-Image{
-    width: 100%;
-    align-items: center;
-    margin-bottom: 1rem;
-  }
-  .Introduction1{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .Intro-Header{
-    width: 100%;
-    
-  }
-  .icon-bar{
-    display: none;
-  }
-  .Team-div-Content{
-    display: flex;
-    flex-direction: column;
-  }
-}
+
 .Team-div-Content .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   width: 300px;
@@ -596,7 +513,122 @@ margin-top:-15px;
       padding: 0 2rem;
   }
 }
+@media only screen and (max-width: 900px){
+  .HomeContainer{
+    width: 100%;
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+  }
+  .Introduction1{
+    clip-path: polygon(100% 0, 100% 95%, 57% 100%, 0 94%, 0 0);
+    align-items: center;
+  }
+  .Intro-Content{
+    width: 100%;
+  }
+  .Header-Intro h1{
+    width: 90%;
+  }
+  .Youtube-Integration{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  
+  }
+  .HealthCard{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .Slider{
+    width: 100%;
+    margin-top: 0%;
+  }
+  .Slider h1{
+    font-size: 1.4rem;
+    
+  }
+  .Youtube-Integration{
+    margin: 0%;
+  }
+  .Achievement-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 1rem;
+  }
+  .Gallery-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+  }
+  .GalleryImages{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .Introduction-2{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .Intro-Image{
+    width: 100%;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .Introduction1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .Intro-Header{
+    width: 100%;
+    align-items: center;
+    margin-left: 0;
+    
+  }
+  .icon-bar{
+    display: none;
+  }
+  .Team-div-Content{
+    display: flex;
+    flex-direction: column;
+  }
+}
 @media only screen and (max-width:  768px) {
+  .Slider h1{
+    width: fit-content;
+  }
+  .blur{
+    width: 90%;
+    justify-content: flex-start;
+    row-gap: 3rem;
+  }
+  .Slide p{
+    width: 80%;
+    font-size: 0.9rem;
+  }
+  .Achievement-div{
+    width: 90%;
+  }
+  .Achievement-div h2{
+    width: 100%;
+    text-align: center;
+  }
+  .GalleryHeader h1{
+    width: max-content;
+  }
+  .GalleryHeader p{
+    width: 100%;
+    text-align: justify;
+  }
+  .Footer .logo h2{
+    width: max-content;
+  }
   .testimonial{
       margin-top: 5rem;
       flex-direction: column;
@@ -625,14 +657,18 @@ margin-top:-15px;
   .testimonial .carousal .item{
       padding: 0rem;
   }
+  .Intro-Header{
+    margin-left: 0;
+    align-items: center;
+  }
 }
 @media only screen and (max-width: 600px) {
   .Youtube-Integration iframe {
     width: 90%;
   }
 }
-@media only screen and (max-width:  320px) {
+@media only screen and (max-width:  425px) {
   .HealthCard .Card{
-    width: 90%;
+    width: 85%;
   }
 }

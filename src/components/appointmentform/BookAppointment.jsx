@@ -137,7 +137,7 @@ export default function BookAppointment() {
         <div className="lContent">
           <img src={illustration} alt="" />
           <h2>
-            Regular Visit is Important To Make Sure Any Health Issues don't Go
+            Regular Visit is Important To Make Sure Any Health Issue don't Go
             Undiscovered!!
           </h2>
           <p>
@@ -149,7 +149,7 @@ export default function BookAppointment() {
         <div className="Form">
           <h1>Book An Appointment</h1>
           <p>Please feel welcome to contact our friendly reception staff with any general
-            or medical enquiry. Our doctors will recive or return any urgent calls.
+            or medical enquiry. Our doctors will receive or return any urgent calls.
           </p>
 
           <form name="AppointmentForm" onSubmit={HandleSubmit}>
@@ -168,7 +168,7 @@ export default function BookAppointment() {
               type="text"
               id="name"
               name="number"
-              placeholder="+919997777666"
+              placeholder="91-8149931718"
               required
             />
             <label htmlFor="name">Email</label>

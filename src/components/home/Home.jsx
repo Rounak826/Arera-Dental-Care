@@ -47,6 +47,7 @@ export const Home = () => {
           interval={2000}
           showArrows={false}
           showStatus={false}
+          preventMovementUntilSwipeScrollTolerance={true}
         >
           <div
             className="Slide"
@@ -167,13 +168,13 @@ export const Home = () => {
         <div className="Team-div-Content">
           <div className="card">
             <img src={teamimage} alt="" />
-            <h1>Dr Swapnil Jain</h1>
+            <h3>Dr Swapnil Jain</h3>
             <p className="title">BDS, MDS,PGDHM</p>
             <p>Arera Dental Clinic</p>
           </div>
           <div className="card">
             <img src={image} alt="" />
-            <h1>Dr Shweta Jain </h1>
+            <h3>Dr Shweta Jain </h3>
             <p className="title">BDS,MSC (Medical),PGDCR</p>
             <p>Arera Dental Clinic</p>
           </div>

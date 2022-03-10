@@ -40,6 +40,7 @@
   padding: 0.8px;
   display: flex;
   flex-direction: column;
+  align-items: stretch;
 }
 
 @media screen and (max-width: 650px) {
@@ -69,4 +70,29 @@
   content: "";
   clear: both;
   display: table;
+}
+@media only screen and (max-width: 1334px) {
+  .Team-Container{
+    margin-left: 2rem;
+    align-items: center;
+  }
+  .Team-Container .card {
+    min-width: 335px;
+  }
+  .Team-Container .column{
+    width: fit-content;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .Team-Container{
+    margin: 0;
+    align-items: center;
+  }
+  .Team-Container .column{
+    width: fit-content;
+  }
+  .Team-Container .row{
+    justify-content: center;
+  }
+
 }

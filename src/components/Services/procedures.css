@@ -9,7 +9,8 @@
 
 .Banner {
   width: 100%;
-  height: 70vh;
+  height: fit-content;
+  padding-bottom: 8rem;
   background-color: #13274e;
   color: #fcfcfc;
   display: flex;
@@ -250,7 +251,6 @@
 @media only screen and (max-width: 900px) {
   .Banner {
     width: 100%;
-    height: 300px;
     display: flex;
     flex-direction: column;
     font-size: small;

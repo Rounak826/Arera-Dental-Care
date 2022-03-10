@@ -17,7 +17,7 @@ import FloatingButton from './components/floatingButton/FloatingButton';
 import {Footer} from './components/footer/Footer'
 function App() {
   return (
-    <div className="App">
+    <div className="App" id='App'>
       <Router>
         <Navbar />
         <Routes>
