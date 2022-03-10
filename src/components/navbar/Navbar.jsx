@@ -1,10 +1,10 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import { Menu, PhoneCall, X } from "react-feather";
-import { ReactComponent as Whatsapp } from '../../assets/whatsapp.svg'
 import { Link, useLocation } from "react-router-dom";
+import logo from "../../assets/logo.png";
+import { ReactComponent as Whatsapp } from '../../assets/whatsapp.svg';
 import "./navbar.css";
-import logo from "../../assets/logo.png"
 export default function Navbar() {
   let location = useLocation();
   const [showMenu, setShowMenu] = useState(false);
@@ -126,7 +126,7 @@ export default function Navbar() {
                 <div className="col">
                   <h4>For Online Consultation</h4>
                   <div className="row">
-                    <Whatsapp /><a href="https://api.whatsapp.com/send?phone=917898777836" rel="noreferrer" target="_blank">Consult Online</a>
+                    <Whatsapp /><a href="https://api.whatsapp.com/send?phone=917880008868" rel="noreferrer" target="_blank">Consult Online</a>
                   </div>
                 </div>
               </div>

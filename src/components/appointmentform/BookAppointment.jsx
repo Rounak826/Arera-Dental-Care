@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import "./bookappointment.css";
 import emailjs from "emailjs-com";
-import illustration from '../../assets/bookAppointment.svg'
-import Alert from '../../components/Alert/Alert'
+import React, { useState } from "react";
 import { AlertCircle } from "react-feather";
+import illustration from '../../assets/bookAppointment.svg';
+import Alert from '../../components/Alert/Alert';
+import "./bookappointment.css";
 export default function BookAppointment() {
 
   const [loading, setLoading] = useState(false);
@@ -138,7 +138,7 @@ export default function BookAppointment() {
           <img src={illustration} alt="" />
           <h2>
             Regular Visit is Important To Make Sure Any Health Issue don't Go
-            Undiscovered!!
+            Undiscovered!
           </h2>
           <p>
             With modern,busy lifestyles, it's easy to neglect your health as you
@@ -147,7 +147,7 @@ export default function BookAppointment() {
           </p>
         </div>
         <div className="Form">
-          <h1>Book An Appointment</h1>
+          <h1>Book an Appointment</h1>
           <p>Please feel welcome to contact our friendly reception staff with any general
             or medical enquiry. Our doctors will receive or return any urgent calls.
           </p>

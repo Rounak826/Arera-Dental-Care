@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import "./contactus.css";
-import contactuslogo from "./contactuslogo.svg";
 import { Mail, MapPin, PhoneCall } from "react-feather";
 import Alert from "../Alert/Alert";
+import "./contactus.css";
+import contactuslogo from "./contactuslogo.svg";
 export const ContactUs = () => {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState({

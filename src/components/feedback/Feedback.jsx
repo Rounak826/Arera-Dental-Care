@@ -82,7 +82,7 @@ export default function Feedback() {
             />
 
 
-            <label htmlFor="subject">Query</label>
+            <label htmlFor="subject">Feedback</label>
             <textarea
               id="subject"
               name="feedback"
