@@ -1,26 +1,25 @@
+import { motion, useAnimation } from "framer-motion";
 import React, { useEffect } from "react";
-import "./procedures.css";
-import { Link } from "react-router-dom";
-import procedures from './Proceduresimg.svg'
-import All46 from '../../assets/All46 Implant Supported Dentures.jpg'
-import RootCanal from '../../assets/Root Canal.png'
-import Orthodontictreatment from '../../assets/Orthodontic treatment.jpg'
-import CosmeticDentalProcedures from '../../assets/Cosmetic Dental Procedures.jpg'
-import Dentures from '../../assets/Dentures.jpg'
-import dentalExtractions from '../../assets/dental Extractions.jpg'
-import dentalFillings from '../../assets/dental Fillings.jpg'
-import Gumtreatments from '../../assets/Gum treatments.jpg'
-import PaediatricDentistConsultation from '../../assets/Paediatric Dentist Consultation.jpeg'
-import CeramicBraces from '../../assets/Ceramic Braces.jpg'
-import InvisibleBraces from '../../assets/Invisible Braces.jpg'
-import Teethwhitening from '../../assets/Teeth whitening.jpg'
-import VeneersCrowns from '../../assets/VeneersCrowns.jpg'
-import RootCanalTreatments from '../../assets/Root Canal Treatments.jpg'
-import ToothExtractions from '../../assets/Tooth Extractions.jpg'
-import DentalImplant from '../../assets/Dental Implant.jpg'
 import { Circle } from "react-feather";
 import { useInView } from "react-intersection-observer";
-import { motion, useAnimation } from "framer-motion";
+import { Link } from "react-router-dom";
+import All46 from '../../assets/All46 Implant Supported Dentures.jpg';
+import CeramicBraces from '../../assets/Ceramic Braces.jpg';
+import CosmeticDentalProcedures from '../../assets/Cosmetic Dental Procedures.jpg';
+import dentalExtractions from '../../assets/dental Extractions.jpg';
+import dentalFillings from '../../assets/dental Fillings.jpg';
+import DentalImplant from '../../assets/Dental Implant.jpg';
+import Dentures from '../../assets/Dentures.jpg';
+import Gumtreatments from '../../assets/Gum treatments.jpg';
+import InvisibleBraces from '../../assets/Invisible Braces.jpg';
+import PaediatricDentistConsultation from '../../assets/Paediatric Dentist Consultation.jpeg';
+import RootCanalTreatments from '../../assets/Root Canal Treatments.jpg';
+import RootCanal from '../../assets/Root Canal.png';
+import Teethwhitening from '../../assets/Teeth whitening.jpg';
+import ToothExtractions from '../../assets/Tooth Extractions.jpg';
+import VeneersCrowns from '../../assets/VeneersCrowns.jpg';
+import "./procedures.css";
+import procedures from './Proceduresimg.svg';
 
 const spc = {
   category: 'Special Dental treatment available in the clinic',
@@ -180,7 +179,7 @@ export const Procedures = () => {
           <h1>
             SETS THE STANDARDS FOR OUTSTANDING HIGH{" "}
             <span className="Mods">QUALITY</span> CARE AND{" "}
-            <span className="Mods">PATIENT SAFETY</span>.
+            <span className="Mods">PATIENT SAFETY</span>
           </h1>
           <Link to={"/BookAppointment"} className="button1">
             Make Appointment +
@@ -193,7 +192,7 @@ export const Procedures = () => {
       </div>
       <div className="special">
         <div className="head">
-          <h2>Special Dental treatment available in the clinic</h2>  
+          <h2>Specialty Treatments</h2>  
         </div>
         <div className="container">
           {
@@ -207,7 +206,7 @@ export const Procedures = () => {
       </div>
       <div ref={ref}  className="ServiceCards">
         <div className="Header">
-          <h1>Our Services</h1>
+          <h1>General Treatments</h1>
         </div>
 
         {

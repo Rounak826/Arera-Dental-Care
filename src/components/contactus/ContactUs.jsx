@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import "./contactus.css";
-import contactuslogo from "./contactuslogo.svg";
 import { Mail, MapPin, PhoneCall } from "react-feather";
 import Alert from "../Alert/Alert";
+import "./contactus.css";
+import contactuslogo from "./contactuslogo.svg";
 export const ContactUs = () => {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState({
@@ -40,6 +40,7 @@ export const ContactUs = () => {
       .then(response => response.text())
       .then(result => {
         console.log(result)
+        setLoading(false);
         setMessage(
           {
             status: true,
@@ -50,12 +51,14 @@ export const ContactUs = () => {
       })
       .catch(error => {
         console.log('error', error)
+        setLoading(false);
         setMessage(
           {
             status: true,
             message: "Failed To send Query",
             error: false
           }
+
         )
       });
   }

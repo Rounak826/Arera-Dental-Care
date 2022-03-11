@@ -25,9 +25,24 @@ justify-content: center;
 }
 .Footer .time{
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 0.8rem;
   color: #fff;
+}
+
+.Footer .time p{
+  margin: 0;
+  font-weight: 600;
+  align-items:left ;
+}
+.Footer .time .row{
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+.Footer .time .row p{
+  font-weight: 400;
 }
 .Footer img{
   width: 60%;
@@ -112,7 +127,14 @@ margin-top: 0.5rem;
   margin-top: 1rem;
   align-items: flex-start;
 }
-
+.center{
+  display: flex;
+  justify-content: center;
+  
+}
+.center a{
+  font-size: 1rem !important;
+}
 @media only screen and (max-width: 900px){
   .Footer{
     width: 100%;
@@ -147,6 +169,7 @@ margin-top: 0.5rem;
       align-items: center;
     }
 }
+
 @media only screen and (max-width: 768px){
   .Footer .Row {
     width: 100%;

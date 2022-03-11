@@ -37,6 +37,7 @@ export default function Feedback() {
       .then(response => response.text())
       .then(result => {
         console.log(result)
+        setLoading(false);
         setMessage(
           {
             status: true,
@@ -47,6 +48,7 @@ export default function Feedback() {
       })
       .catch(error => {
         console.log('error', error)
+        setLoading(false);
         setMessage(
           {
             status: true,
@@ -82,7 +84,7 @@ export default function Feedback() {
             />
 
 
-            <label htmlFor="subject">Query</label>
+            <label htmlFor="subject">Feedback</label>
             <textarea
               id="subject"
               name="feedback"

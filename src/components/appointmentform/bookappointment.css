@@ -143,6 +143,11 @@ input[type="time"] {
   box-shadow: -4px 1px 19px -8px rgba(0, 0, 0, 0.32);
 
 }
+@media only screen and (max-width: 800px) {
+  .tooltip{
+    left: 0;
+  }
+}
 @media only screen and (max-width: 600px) {
   .AppointmentForm {
     width: 100%;

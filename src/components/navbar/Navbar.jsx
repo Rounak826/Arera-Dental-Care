@@ -1,10 +1,11 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import { Menu, PhoneCall, X } from "react-feather";
-import { ReactComponent as Whatsapp } from '../../assets/whatsapp.svg'
 import { Link, useLocation } from "react-router-dom";
+import logo from "../../assets/logo.svg";
+import { ReactComponent as Whatsapp } from '../../assets/whatsapp.svg';
 import "./navbar.css";
-import logo from "../../assets/logo.png"
+
 export default function Navbar() {
   let location = useLocation();
   const [showMenu, setShowMenu] = useState(false);
@@ -47,10 +48,6 @@ export default function Navbar() {
       >
         <div className="logo">
           <img src={logo} alt="" />
-          <div className="col">
-            <h1>Arera</h1>
-            <span>Dental Care</span>
-          </div>
         </div>
 
         <div className="links">
@@ -63,16 +60,11 @@ export default function Navbar() {
         </div>
         <div className="info">
           <div className="col">
-            <h4>Call Us At</h4>
-            <div className="row">
-              <PhoneCall /> <a href="tel:+919893022115">+919893022115</a>
-            </div>
+               <a className="btn-2" href="tel:+919893022115"><PhoneCall /><span>+919893022115</span></a>
+              
           </div>
           <div className="col">
-            <h4>For Online Consultation</h4>
-            <div className="row">
-              <Whatsapp /> <a href="https://api.whatsapp.com/send?phone=917880008868" rel="noreferrer" target="_blank">Consult Online</a>
-            </div>
+              <a className="btn-1" href="https://api.whatsapp.com/send?phone=917880008868" rel="noreferrer" target="_blank"><Whatsapp /> <span> Consult Online</span></a>
           </div>
         </div>
         <button
@@ -126,7 +118,7 @@ export default function Navbar() {
                 <div className="col">
                   <h4>For Online Consultation</h4>
                   <div className="row">
-                    <Whatsapp /><a href="https://api.whatsapp.com/send?phone=917898777836" rel="noreferrer" target="_blank">Consult Online</a>
+                    <Whatsapp /><a href="https://api.whatsapp.com/send?phone=917880008868" rel="noreferrer" target="_blank">Consult Online</a>
                   </div>
                 </div>
               </div>

@@ -112,7 +112,7 @@ export const Home = () => {
         <img src={achievementlogo1} alt="" />
         <h2>
           {" "}
-          <span className="Mods">1,000+</span> Cured Patients{" "}
+          <span className="Mods">5000+</span> Cured Patients{" "}
         </h2>
         <img src={achievementlogo2} alt="" />
         <h2>
@@ -170,13 +170,13 @@ export const Home = () => {
             <img src={teamimage} alt="" />
             <h3>Dr Swapnil Jain</h3>
             <p className="title">BDS, MDS,PGDHM</p>
-            <p>Arera Dental Clinic</p>
+            <p>Arera Dental Care</p>
           </div>
           <div className="card">
             <img src={image} alt="" />
             <h3>Dr Shweta Jain </h3>
             <p className="title">BDS,MSC (Medical),PGDCR</p>
-            <p>Arera Dental Clinic</p>
+            <p>Arera Dental Care</p>
           </div>
         </div>
         <div className="Team-Button">
