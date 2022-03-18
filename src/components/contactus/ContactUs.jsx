@@ -11,9 +11,14 @@ export const ContactUs = () => {
     error: false
   })
 
- 
+
 
   const HandleSubmit = (e) => {
+    setMessage({
+      status: false,
+      message: "",
+      error: false
+    })
     e.preventDefault();
     setLoading(true);
     const scriptURL = `https://v1.nocodeapi.com/arera_dental_care/google_sheets/XqcMOoUlqgTXPODl?tabId=Query`;
@@ -22,8 +27,9 @@ export const ContactUs = () => {
     myHeaders.append("Content-Type", "application/json");
     const form = document.forms['contactUs']
     let data = new FormData(form)
+
     let row = [
-      [data.get("firstname"), data.get("lastname"), data.get("number"),data.get("query")]
+      [data.get("firstname"), data.get("lastname"), data.get("number"), data.get("query")]
     ]
 
     console.log(row)
@@ -34,33 +40,45 @@ export const ContactUs = () => {
       body: JSON.stringify(row)
     };
 
+    if (data.get("number").length === 10) {
+      //console.log(data.get("name"));
+      fetch(scriptURL, requestOptions)
+        .then(response => response.text())
+        .then(result => {
+          console.log(result)
+          setLoading(false);
+          setMessage(
+            {
+              status: true,
+              message: "Query Sent Successfully!",
+              error: false
+            }
+          )
+        })
+        .catch(error => {
+          console.log('error', error)
+          setLoading(false);
+          setMessage(
+            {
+              status: true,
+              message: "Failed To send Query",
+              error: false
+            }
 
-    //console.log(data.get("name"));
-    fetch(scriptURL, requestOptions)
-      .then(response => response.text())
-      .then(result => {
-        console.log(result)
-        setLoading(false);
-        setMessage(
-          {
-            status: true,
-            message: "Query Sent Successfully!",
-            error: false
-          }
-        )
-      })
-      .catch(error => {
-        console.log('error', error)
-        setLoading(false);
-        setMessage(
-          {
-            status: true,
-            message: "Failed To send Query",
-            error: false
-          }
+          )
+        });
+    }else{
+      setLoading(false);
+      setMessage(
+        {
+          status: true,
+          message: "Enter Valid Phone No.",
+          error: true
+        }
 
-        )
-      });
+      )
+    }
+
   }
 
   return (
@@ -73,7 +91,7 @@ export const ContactUs = () => {
         <div className="form">
           <h1>Contact Us</h1>
           <form name="contactUs" onSubmit={HandleSubmit}>
-          {message.status&&<Alert error={message.error} message={message.message} />}
+            {message.status && <Alert error={message.error} message={message.message} />}
             <label htmlFor="firstname">First Name</label>
             <input
               type="text"
@@ -96,7 +114,7 @@ export const ContactUs = () => {
               type="text"
               id="lname"
               name="number"
-              placeholder="91-8149931718"
+              placeholder="Enter 10 digit mobile No."
               required
             />
 
@@ -110,7 +128,7 @@ export const ContactUs = () => {
               required
             ></textarea>
 
-            <input type="submit" value={loading?"Sending...":"Submit"} />
+            <input type="submit" value={loading ? "Sending..." : "Submit"} />
           </form>
         </div>
       </div>
@@ -127,7 +145,7 @@ export const ContactUs = () => {
         <div>
           <h1>Address</h1>
           <div className="AddressRow">
-            <MapPin/>
+            <MapPin />
             <p>
               #28, Manisha Market, opp Shahpura Lake, Bhopal.
             </p>
@@ -138,7 +156,7 @@ export const ContactUs = () => {
             </p>
           </div>
           <div className="AddressRow">
-            <Mail/>
+            <Mail />
             <p>Email Id- drswapniljain@yahoo.co.in
             </p>
           </div>

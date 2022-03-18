@@ -19,7 +19,7 @@
   justify-content: center;
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size:cover;
   align-items: center;
   gap:2rem;
 object-fit: contain;
@@ -96,6 +96,7 @@ object-fit: contain;
   font-size: 3rem;
   width: 60%;
   color: #2b3a58;
+  text-shadow: 0 0 1px rgb(0, 0, 0);
 }
 
 

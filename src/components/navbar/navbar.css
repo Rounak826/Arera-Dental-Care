@@ -65,12 +65,13 @@ font-size: 0.9rem;
   background-color: #fff;
 }
 nav .logo{
+  padding-top: 1rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
   margin-left: 5rem;
-  width: fit-content;
+  width:max-content;
   min-width: 50px;
   padding: 1rem;
 }
@@ -94,7 +95,7 @@ margin: 0;
 }
 nav .logo img{
   width: 100%;
-  max-width: 8rem;
+  max-width: 10rem;
   min-width: 6rem;
 }
 nav .navigation{

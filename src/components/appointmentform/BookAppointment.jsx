@@ -13,15 +13,16 @@ export default function BookAppointment() {
     error: false
   })
   function validateEmail(mail) {
-    console.log(mail)
     if (/[a-z0-9.]+@[a-z]+\.[a-z]{2,3}/.test(mail)) {
       setMessage({
         status: false,
         message: "",
         error: false
       })
+      console.log('email:pass');
       return true;
     } else {
+      console.log('email:fail');
       setMessage({
         status: true,
         message: "Enter Valid Email",
@@ -34,14 +35,15 @@ export default function BookAppointment() {
 
   }
   function validatePhone(number) {
-    console.log(number);
-    if (number.length === 13) {
+    if (number.length === 10) {
+      console.log('number:pass');
       setMessage({
         status: false,
         message: "",
         error: false
       })
     } else {
+      console.log('number:fail');
       setMessage({
         status: true,
         message: "Enter Valid Phone Number",
@@ -50,7 +52,7 @@ export default function BookAppointment() {
       setLoading(false);
       scrollToTargetAdjusted("Form-alert")
     }
-    return (number.length === 13);
+    return (number.length === 10);
   }
   function validation(email, phone) {
     let flag = true;
@@ -62,7 +64,6 @@ export default function BookAppointment() {
     } else {
       flag = true;
     }
-    console.log(flag)
     return flag
   }
 
@@ -76,7 +77,7 @@ export default function BookAppointment() {
     const form = document.forms['AppointmentForm']
     let data = new FormData(form)
     let row = [
-      [data.get("name"), data.get("number"), data.get("email"), data.get("age"),data.get("gender"), data.get("AppointmentDate"), data.get("AppointmentTime"), data.get("procedure")]
+      [data.get("name"), data.get("number"), data.get("email"), data.get("age"), data.get("gender"), data.get("AppointmentDate"), data.get("AppointmentTime"), data.get("procedure")]
     ]
 
     var requestOptions = {
@@ -100,7 +101,7 @@ export default function BookAppointment() {
         })
         .catch(error => console.log('error', error));
     } else {
-      console.log(validation(data.get("email"), data.get("number")));
+
     }
     //console.log(data.get("name"));
     /**/
@@ -168,7 +169,7 @@ export default function BookAppointment() {
               type="text"
               id="name"
               name="number"
-              placeholder="91-8149931718"
+              placeholder="Enter 10 digit mobile No."
               required
             />
             <label htmlFor="name">Email</label>
@@ -190,8 +191,8 @@ export default function BookAppointment() {
                 <label htmlFor="gender">Gender</label>
                 <select name="gender">
                   <option value="male">Male</option>
-                  <option value="female">Female</option> 
-                  <option value="Other">Other</option> 
+                  <option value="female">Female</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
             </div>
@@ -200,12 +201,11 @@ export default function BookAppointment() {
                 <label htmlFor="date">Date:</label>
                 <input type="date" id="date" name="AppointmentDate" required />
               </div>
-              <div className="col has-tooltip">
+              <div className="col">
                 <label htmlFor="Time">Time</label>
                 <input type="time" id="time" name="AppointmentTime" required />
-                <div className="tooltip"><AlertCircle /><p>Choose time between 6:30 Pm to 9:00 Pm</p></div>
               </div>
-              
+
             </div>
 
 

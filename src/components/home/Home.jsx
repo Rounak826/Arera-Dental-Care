@@ -5,7 +5,7 @@ import { Carousel } from "react-responsive-carousel";
 import slideone from "./slide1.jpg";
 import slidetwo from "./slide2.jpg";
 import slidethree from "./slide3.jfif";
-import slidefour from "./slide4.jpg";
+import slidefour from "../../assets/slide4.jpg";
 import Image1 from "./Image1.jpg";
 import Image2 from "./Image2.jpg";
 import Image3 from "./Image3.jpg";
@@ -70,15 +70,36 @@ export const Home = () => {
           <div
             className="Slide"
             style={{ backgroundImage: `url(${slidetwo})` }}
-          ></div>
+          >
+             <div className="blur">
+              <h1>
+                Giving <span className="Mods">Our Patients</span> Somethimg to
+                <span className="Mods"> Smile</span> about.
+              </h1>
+            </div>
+          </div>
           <div
             className="Slide"
             style={{ backgroundImage: `url(${slidethree})` }}
-          ></div>
+          >
+             <div className="blur">
+              <h1>
+                Preventative <span className="Mods">Dental Care</span> that helps maintain
+                <span className="Mods"> Oral Health</span>.
+              </h1>
+            </div>
+          </div>
           <div
             className="Slide"
             style={{ backgroundImage: `url(${slidefour})` }}
-          ></div>
+          >
+             <div className="blur">
+              <h1>
+                Your <span className="Mods">Smile</span> is important
+                <span className="Mods"> to us</span>.
+              </h1>
+            </div>
+          </div>
         </Carousel>
       </div>
       <div className="Introduction1">
@@ -100,7 +121,7 @@ export const Home = () => {
           <iframe
             width="560"
             height="315"
-            src="https://www.youtube.com/embed/dgwJgvdk0K4"
+            src="https://www.youtube.com/embed/87z0MaciCb4"
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
